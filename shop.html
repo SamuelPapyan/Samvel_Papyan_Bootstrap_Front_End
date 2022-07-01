@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	
+  <title>SmartZone</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row bg-white justify-content-around align-items-center">
+			<div class="col-lg-2 col-6 d-none d-lg-block text-center">
+				<strong>tel :+374 93 123456</strong>
+			</div>
+			<div class="col-lg-2 col-6 d-none d-lg-block text-center">
+				<strong>The Next Big Thing Is Already Here</strong>
+			</div>
+			<select class="col-lg-1 col-sm-6">
+				<option value="am">Հայ</option>
+				<option value="en">Eng</option>
+				<option value="ru">Рус</option>
+			</select> 
+			<select class="col-lg-1 col-sm-6">
+				<option value="amd">&#1423;</option>
+				<option value="usd">&#36;</option>
+				<option value="rub">&#8381;</option>
+			</select>
+			<button type="button" class="col-2 d-none d-lg-block btn btn-primary">
+			  Wishlist <span class="badge text-bg-danger">3</span>
+			</button>
+		</div>
+		<div class="row bg-dark p-1 align-items-center">
+			<div class="col-lg-6 col-9 navbar-brand">
+				<a href="#" class="text-decoration-none" class="col-9">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="..." class="col-6"/>
+				</a>
+			</div>
+			<div class="col d-none d-lg-flex input-group">
+			  <div class="form-outline">
+				<input type="search" id="searchForm" class="form-control" placeholder="Search"/>
+			  </div>
+			  <button type="button" class="btn btn-primary">
+				<i class="fa fa-search"></i>
+			  </button>
+			</div>
+			<div class="col-2 dropdown">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+				My Account
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+				<li><a class="dropdown-item" href="#">Login</a></li>
+				<li><a class="dropdown-item" href="#">Register</a></li>
+				<li><a class="dropdown-item" href="#">My Orders</a></li>
+				<li><a class="dropdown-item" href="#">Account Settings</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div class="row bg-primary navbar navbar-expand-lg justify-content-around">
+			<button class="d-lg-none navbar-toogler btn col-1" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesList" aria-controls="categoriesList" aria-expanded="false" aria-label="Toggle categories">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="row collapse d-lg-flex justify-content-around" id="categoriesList">
+				<div class="col-lg-2 dropdown">
+				  <button class="btn dropdown-toggle" type="button" id="category1Dropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="category1Dropdown">
+					<strong>Mobiles</strong>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="category1Dropdown">
+					<li><a class="dropdown-item" href="#">Smartphones</a></li>
+					<li><a class="dropdown-item" href="#">Tablets</a></li>
+					<li><a class="dropdown-item" href="#">Watches</a></li>
+				  </ul>
+				</div>
+				<div class="col-lg-2 dropdown">
+				  <button class="btn dropdown-toggle" type="button" id="category2Dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<strong>TV</strong>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="category2Dropdown">
+					<li><a class="dropdown-item" href="#">TVs</a></li>
+					<li><a class="dropdown-item" href="#">Lifestyle TVs</a></li>
+					<li><a class="dropdown-item" href="#">TV Accessories</a></li>
+				  </ul>
+				</div>
+				<div class="col-lg-2 dropdown">
+				  <button class="btn dropdown-toggle" type="button" id="category3Dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<strong>Audio</strong>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="category3Dropdown">
+					<li><a class="dropdown-item" href="#">Home Audio</a></li>
+				  </ul>
+				</div>
+				<div class="col-lg-2 dropdown">
+				  <button class="btn dropdown-toggle" type="button" id="category4Dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<strong>Appliance</strong>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="category4Dropdown">
+					<li><a class="dropdown-item" href="#">Kitchen</a></li>
+					<li><a class="dropdown-item" href="#">Laundry</a></li>
+					<li><a class="dropdown-item" href="#">Vacuums & Mops</a></li>
+				  </ul>
+				</div>
+				<div class="col-lg-2 dropdown">
+				  <button class="btn dropdown-toggle" type="button" id="category5Dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<strong>Computing</strong>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="category5Dropdown">
+					<li><a class="dropdown-item" href="#">Chromebooks</a></li>
+					<li><a class="dropdown-item" href="#">Monitors</a></li>
+					<li><a class="dropdown-item" href="#">Memory & Storage</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row m-1 justify-content-between align-items-center">
+			<div class="col-9">
+				<p>
+					<a href="#" class="text-link text-decoration-none">Computers</a> / 
+					<a href="#" class="text-link text-decoration-none">Laptops</a> / 
+					<span href="#" class="text-secondary">Gaming Laptops</span>
+				</p>
+			</div>
+			<div class="col-3 row justify-content-end">
+				<span class="col-4">Sort By </span>
+				<select class="col">
+					<option value="lth">Price: Low To High</option>
+					<option value="htl">Price: High To Low</option>
+					<option value="a-z">Product Name: A-Z</option>
+					<option value="z-a">Product Name: Z-A</option>
+					<option value="ftl">Product: First To Last</option>
+					<option value="ltf">Product: Last To First</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="d-none d-lg-block col-3 p-1">
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Brand</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select CPU</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Size</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Brand</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select CPU</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Size</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Brand</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select CPU</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Size</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Brand</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select CPU</a>
+				<a href="#" class="text-link d-block m-1 text-decoration-none">Select Size</a>
+				<div class="form-check form-switch">
+				  <input class="form-check-input" type="checkbox" role="switch" id="withImagesOnlyCheck">
+				  <label class="form-check-label" for="withImagesOnlyCheck">With Images Only</label>
+				</div>
+				<div class="form-check form-switch">
+				  <input class="form-check-input" type="checkbox" role="switch" id="freeShippingSwitch">
+				  <label class="form-check-label" for="freeShippingSwitch">Free Shipping</label>
+				</div>
+			</div>
+			<div class="col-12 row col-lg-9">
+				<div class="col-6 col-lg-12 row">
+					<div class="col-12 col-lg-3">
+						<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					</div>
+					<div class="col-12 col-lg-6">
+						<h4 class="text-primary">15.6" Inspiron 15 Multi-Touch Laptop (Intel Core i3, 8GB RAM, 128GB SSD)</h4>
+						<ul class="d-none d-lg-block">
+							<li>2.2 GHz Intel Core i3-8130U Dual-Core</li>
+							<li>8GB DDR4 | 128GB SSD</li>
+							<li>15.6" 1920 x 1080 FHD Touchscreen</li>
+							<li>Integrated Intel UHD Graphics 620</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3 text-center row flex-column justify-content-center align-items-center">
+						<h1 class="col fs-1">$100</h1>
+						<a href="#" class="btn btn-primary col-9 w-fluid">Add To Cart</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center align-items-center justify-content-center bg-white">
+			<div class="col-12 p-1 col-lg-3 border">
+				<a href="#" class="text-decoration-none text-dark">CONTACT US</a>
+			</div>
+			<div class="col-12 p-1 col-lg-3 border">
+				<a href="#" class="text-decoration-none text-dark">LIVE CHAT</a>
+			</div>
+			<div class="col-12 p-1 col-lg-3 border">
+				<a href="#" class="text-decoration-none text-dark">SHIPPING</a>
+			</div>
+			<div class="col-12 p-1 col-lg-3 border">
+				<a href="#" class="text-decoration-none text-dark">TERM & CONDITIONS</a>
+			</div>
+		</div>
+		<div class="row d-none d-lg-flex bg-white justify-content-center">
+			<div class="col row flex-column border">
+				<strong class="text-dark">LINK GROUP 1</strong>
+				<a href="#" class="text-decoration-none text-dark col">Link 1</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 2</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 3</a>
+			</div>
+			<div class="col row flex-column border">
+				<strong class="text-dark">LINK GROUP 2</strong>
+				<a href="#" class="text-decoration-none text-dark col">Link 1</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 2</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 3</a>
+			</div>
+			<div class="col row flex-column border">
+				<strong class="text-dark">LINK GROUP 3</strong>
+				<a href="#" class="text-decoration-none text-dark col">Link 1</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 2</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 3</a>
+			</div>
+			<div class="col row flex-column border">
+				<strong class="text-dark">LINK GROUP 4</strong>
+				<a href="#" class="text-decoration-none text-dark col">Link 1</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 2</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 3</a>
+			</div>
+			<div class="col row flex-column border">
+				<strong class="text-dark">LINK GROUP 5</strong>
+				<a href="#" class="text-decoration-none text-dark col">Link 1</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 2</a>
+				<a href="#" class="text-decoration-none text-dark col">Link 3</a>
+			</div>
+		</div>
+		<div class="row bg-dark justify-content-between fs-4">
+			<div class="col-12 col-lg-4 row justify-content-center text-center">
+				<strong class="text-danger col d-none d-lg-block">Social Media</strong>
+				<div class="col text-center">
+					<a href="#" class="text-decoration-none text-danger"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="text-decoration-none text-danger"><i class="fa fa-instagram"></i></a>
+					<a href="#" class="text-decoration-none text-danger"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="text-decoration-none text-danger"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+			<div class="col-12 col-lg-2 text-center">
+				<strong class="text-danger">TUMO 2022</strong>
+			</div>
+		</div>
+	</div>
+
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
