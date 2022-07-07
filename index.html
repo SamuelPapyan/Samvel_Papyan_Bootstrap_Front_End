@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  	<link rel="stylesheet" type="text/css" href="my_colors.css">
+  <title>SmartZone</title>
+</head>
+<body>
+	<div class="container-xl">
+		<!-- Header -->
+		<nav class="navbar navbar-expand-lg bg-dark">
+		  <div class="container-fluid">
+		    <a class="navbar-brand col-3" href="index.html">
+		    	<img src="images/SmartZone_logo.PNG" alt="..." class="img-fluid"/>
+		    </a>
+		    <button class="navbar-toggler btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <a href="tel:+374 90123456" class="text-my-blue-2 text-decoration-none fs-5 me-3"><i class="bi bi-phone"></i> +374 90 123456</a>
+		    <div class="collapse navbar-collapse justify-content-center row" id="navbarSupportedContent">
+		      <form class="d-flex me-2" role="search">
+		        <input class="form-control me-2 mb-1" type="search" placeholder="Search product" aria-label="Search">
+		        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+		      </form>
+		      <form class="d-flex me-2 col-6">
+		      	<select class="col me-2 border-rounded form-select">
+					<option value="am">
+						Հայ
+					</option>
+					<option value="en">
+						Eng
+					</option>
+					<option value="ru">
+						Рус
+					</option>
+				  </select> 
+				  <select class="col me-2 border-rounded form-select">
+				  	<option value="amd">&#1423;</option>
+					<option value="usd">&#36;</option>
+					<option value="rub">&#8381;</option>
+				  </select>
+		      </form>
+			  <div class="col-3 col-lg-3 dropdown">
+				  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="bi bi-person-circle"></i> My Account
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+					<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+					<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a></li>
+					<li><a class="dropdown-item" href="#">My Orders</a></li>
+					<li><a class="dropdown-item" href="#">Account Settings</a></li>
+				  </ul>
+			  </div>
+		    </div>
+		  </div>
+		</nav>
+		<!-- Carousel -->
+		<div class="row justify-content-center d-none d-lg-flex">
+			<div id="carouselExampleIndicators" class="carousel slide col-fluid" data-bs-ride="false">
+			  <div class="carousel-indicators">
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  </div>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <div class="row bg-dark justify-content-around">
+			      	<div class="col row text-end flex-column justify-content-center align-items-end">
+			      		<div class="col-12">
+			      			<h2 class="text-primary">Tablets</h2>
+			      		</div>
+			      		<div class="col-12">
+			      			<p class="text-secondary">The big sizes for small businesses.</p>
+			      		</div>
+		      			<div class="col-12 row justify-content-end align-items-center">
+		      				<a href="#" class="btn btn-primary col-4 m-1">Add To Cart</a>
+		      				<a href="#" class="btn btn-outline-primary col-4 m-1">View Product</a>
+		      			</div>
+			      	</div>
+			      	<div class="col">
+			      		<img src="https://toppng.com/uploads/preview/tablet-android-png-clipart-black-and-white-google-nexus-10-wi-fi-only-16-gb-115636471421k90e4ejhq.png" alt="..." class="img-fluid">
+			      	</div>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <div class="row bg-dark justify-content-around">
+			      	<div class="col-6 row text-end flex-column justify-content-center align-items-end">
+			      		<div class="col-12">
+			      			<h2 class="text-primary">Camera</h2>
+			      		</div>
+			      		<div class="col-12">
+			      			<p class="text-secondary">Model: Canon EOS M50</p>
+			      			<p class="text-secondary">Color: Black</p>
+			      			<p class="text-secondary">Professional, Mirrorless</p>
+			      		</div>
+		      			<div class="col-12 row justify-content-end align-items-center">
+		      				<a href="#" class="btn btn-primary col-4 m-1">Add To Cart</a>
+		      				<a href="#" class="btn btn-outline-primary col-4 m-1">View Product</a>
+		      			</div>
+			      	</div>
+			      	<div class="col-6">
+			      		<img src="https://images-na.ssl-images-amazon.com/images/I/61HRnUdvv6L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="..." class="img-fluid">
+			      	</div>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <div class="row bg-dark justify-content-around">
+			      	<div class="col-6 row text-end flex-column justify-content-center align-items-end">
+			      		<div class="col-12">
+			      			<h2 class="text-primary">Xbox Console</h2>
+			      		</div>
+			      		<div class="col-12">
+			      			<p class="text-secondary">The modern game console of the famous company.</p>
+			      		</div>
+		      			<div class="col-12 row justify-content-end align-items-center">
+		      				<a href="#" class="btn btn-primary col-4 m-1">Add To Cart</a>
+		      				<a href="#" class="btn btn-outline-primary col-4 m-1">View Product</a>
+		      			</div>
+			      	</div>
+			      	<div class="col-6">
+			      		<img src="https://m.media-amazon.com/images/I/71AtLTRlT2L.jpg" alt="..." class="img-fluid">
+			      	</div>
+			      </div>
+			    </div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+			</div>
+		</div>
+		<!-- Daily Deals -->
+		<div class="bg-my-blue-3 container-fluid p-1">
+			<h2 class="text-center text-white">Daily Deals</h2>
+			<div class="row justify-content-center row-cols-2 row-cols-lg-2">
+				<div class="col-6 p-1 col-lg-3 text-center bg-dark rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-my-blue-2">PC</h4>
+					<h5 class="text-white">$ 122.99</h5>
+					<h5 class="text-secondary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-outline-primary"><i class="bi bi-cart4"></i><span class="d-none d-lg-inline">Add To Cart</span></a>
+				</div>
+				<div class="col-6 p-1 col-lg-3 text-center bg-dark rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-my-blue-2">PC</h4>
+					<h5 class="text-white">$ 122.99</h5>
+					<h5 class="text-secondary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-outline-primary"><i class="bi bi-cart4"></i><span class="d-none d-lg-inline">Add To Cart</span></a>
+				</div>
+				<div class="col-6 p-1 col-lg-3 text-center bg-dark rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-my-blue-2">PC</h4>
+					<h5 class="text-white">$ 122.99</h5>
+					<h5 class="text-secondary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-outline-primary"><i class="bi bi-cart4"></i><span class="d-none d-lg-inline">Add To Cart</span></a>
+				</div>
+				<div class="col-6 p-1 col-lg-3 text-center bg-dark rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-my-blue-2">PC</h4>
+					<h5 class="text-white">$ 122.99</h5>
+					<h5 class="text-secondary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-outline-primary"><i class="bi bi-cart4"></i><span class="d-none d-lg-inline">Add To Cart</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- Categories -->
+		<div class="bg-my-blue-3 container-fluid p-1">
+			<h2 class="text-center text-white">Categories</h2>
+			<div class="row justify-content-center">
+				<div class="col-5 col-lg-2 m-1 p-1 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid d-none d-lg-block">
+					<a href="#" class="btn btn-outline-primary">Category</a>
+				</div>
+				<div class="col-5 col-lg-2 m-1 p-1 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid d-none d-lg-block">
+					<a href="#" class="btn btn-outline-primary">Category</a>
+				</div>
+				<div class="col-5 col-lg-2 m-1 p-1 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid d-none d-lg-block">
+					<a href="#" class="btn btn-outline-primary">Category</a>
+				</div>
+				<div class="col-5 col-lg-2 m-1 p-1 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid d-none d-lg-block">
+					<a href="#" class="btn btn-outline-primary">Category</a>
+				</div>
+				<div class="col-5 col-lg-2 m-1 p-1 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid d-none d-lg-block">
+					<a href="#" class="btn btn-outline-primary">Category</a>
+				</div>
+			</div>
+		</div>
+		<!-- New Arrivals -->
+		<div class="bg-dark container-fluid p-1">
+			<h2 class="text-center text-white">New Arrivals</h2>
+			<div class="row justify-content-center">
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+				<div class="col-12 m-1 p-1 col-lg-2 text-center bg-white rounded">
+					<img src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" class="img-fluid">
+					<h4 class="text-dark">PC</h4>
+					<h5 class="text-danger">$ 122.99</h5>
+					<h5 class="text-primary text-decoration-line-through">$ 200</h5>
+					<a href="#" class="btn btn-primary">Add To Cart</a>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<div class="container-fluid">
+			<div class="row container-fluid bg-dark justify-content-around">
+				<div class="col-12 col-lg-2 text-center p-1">
+					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Contact Us</strong></a>
+				</div>
+				<div class="col-12 col-lg-2 text-center p-1">
+					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>About Us</strong></a>
+				</div>
+				<div class="col-12 col-lg-2 text-center p-1">
+					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Live Chat</strong></a>
+				</div>
+				<div class="col-12 col-lg-2 text-center p-1">
+					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Shipping</strong></a>
+				</div>
+				<div class="col-12 col-lg-2 text-center p-1">
+					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Term & Conditions</strong></a>
+				</div>
+			</div>
+			<div class="row container-fluid d-none d-lg-flex bg-dark">
+				<div class="col border-primary p-1 text-center border border-primary">
+					<strong class="text-my-blue-2 fs-4">Categories</strong><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Computers</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Mobiles</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">TV & Audio</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Appliance</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Watches</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Gaming</a><br>
+				</div>
+				<div class="col border-primary p-1 text-center border border-primary">
+					<strong class="text-my-blue-2 fs-4">Support</strong><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Contact Us</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Send Feedback</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Your Account</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Chat With Us</a><br>
+				</div>
+				<div class="col border-primary p-1 text-center border border-primary">
+					<strong class="text-my-blue-2 fs-4">About Us</strong><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Leadership & Mission</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Our Business</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Careers</a><br>
+					<a href="#" class="text-my-blue-2 text-decoration-none">Newsroow</a><br>
+				</div>
+			</div>
+			<div class="row container-fluid bg-dark justify-content-between fs-4">
+				<div class="col-12 col-lg-4 row justify-content-center text-center">
+					<strong class="text-my-blue-2 col d-none d-lg-block">Social Media</strong>
+					<div class="col-12 col-lg-5 text-center">
+						<a href="#" class="text-decoration-none text-my-blue-2"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="text-decoration-none text-my-blue-2"><i class="bi bi-instagram"></i></a>
+						<a href="#" class="text-decoration-none text-my-blue-2"><i class="bi bi-twitter"></i></a>
+						<a href="#" class="text-decoration-none text-my-blue-2"><i class="bi bi-youtube"></i></a>
+					</div>
+				</div>
+				<div class="col-12 col-lg-2 text-center">
+					<strong class="text-my-blue-2">TUMO 2022</strong>
+				</div>
+			</div>
+		</div>
+		<!-- Login Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+				  <div class="mb-3">
+				    <label for="usernameLabel" class="form-label">Username</label>
+				    <input type="text" class="form-control" id="usernameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="passwordLabel" class="form-label">Password</label>
+				    <input type="password" class="form-control" id="passwordInput">
+				  </div>
+				  <div class="mb-3 form-check">
+				    <input type="checkbox" class="form-check-input" id="rememberMeCheck">
+				    <label class="form-check-label" for="rememberMeLabel">Remember Me</label>
+				  </div>
+				  <p>Are you new here? <a href="#signUpModal" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up</a></p>
+				  <button type="submit" class="btn btn-primary">Login</button>
+				</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Sign Up -->
+		<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+				  <div class="mb-3">
+				    <label for="firstNameLabel" class="form-label">First Name</label>
+				    <input type="text" class="form-control" id="firstNameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="lastNameLabel" class="form-label">Last Name</label>
+				    <input type="text" class="form-control" id="lastNameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="usernameLabel" class="form-label">Username</label>
+				    <input type="text" class="form-control" id="usernameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="emailLabel" class="form-label">Email</label>
+				    <input type="email" class="form-control" id="emailInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="passwordLabel" class="form-label">Password</label>
+				    <input type="password" class="form-control" id="passwordInput">
+				  </div>
+				  <p>Already have an account? <a href="#loginModal" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+				  <button type="submit" class="btn btn-primary">Sign Up</button>
+				</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
