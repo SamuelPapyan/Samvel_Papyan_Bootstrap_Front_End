@@ -15,104 +15,172 @@
 <body class="facybox-active">
 	<div class="container-xl">
 		<!-- Header -->
-		<nav class="navbar navbar-expand-lg bg-dark">
-		  <div class="container-fluid">
-		    <a class="navbar-brand col-3" href="index.html">
-		    	<img src="images/SmartZone_logo.PNG" alt="..." class="img-fluid"/>
-		    </a>
-		    <button class="navbar-toggler btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		    <a href="tel:+374 90123456" class="text-my-blue-2 text-decoration-none fs-5 me-3"><i class="bi bi-phone"></i> +374 90 123456</a>
-		    <div class="collapse navbar-collapse justify-content-center row" id="navbarSupportedContent">
-		      <form class="d-flex me-2" role="search">
+		<nav class="row bg-dark justify-content-around p-1 m-0">
+			<div class="col-3">
+				<a href="tel:+374 90123456" class="text-my-blue-2 text-decoration-none fs-5 col-3"><i class="bi bi-phone"></i> +374 90 123456</a>
+			</div>
+			<div class="col-4">
+				<form class="d-flex me-2 col-12">
+	      			<select class="col me-3 border-rounded form-select">
+						<option value="am">
+							Հայ
+						</option>
+						<option value="en">
+							Eng
+						</option>
+						<option value="ru">
+							Рус
+						</option>
+				  	</select> 
+					<select class="col me-2 border-rounded form-select">
+					  	<option value="amd">&#1423;</option>
+						<option value="usd">&#36;</option>
+						<option value="rub">&#8381;</option>
+					</select>
+		      	</form>
+			</div>
+			<div class="col-2">
+				<a type="button" href="wishlist.html" class="btn btn-outline-primary">
+				  Wishlist <span class="badge text-bg-primary">4</span>
+				</a>
+			</div>
+		</nav>
+		<nav class="navbar navbar-expand-lg bg-dark row justify-content-between m-0">
+		  <div class="col-12 col-md-3 row justify-content-center">
+		  	<div class="col-4 col-md-12">
+		  		<a class="navbar-brand d-block" href="index.html">
+		    		<img src="images/SmartZone_logo.PNG" alt="..." class="img-fluid col-12 d-block"/>
+		    	</a>
+		  	</div>
+		  </div>
+		  <div class="col-12 col-md-7 justify-content-center row">
+		      <form class="d-flex col-12 col-md-8" role="search">
 		        <input class="form-control me-2 mb-1" type="search" placeholder="Search product" aria-label="Search">
 		        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
 		      </form>
-		      <form class="d-flex me-2 col-6">
-		      	<select class="col me-2 border-rounded form-select">
-					<option value="am">
-						Հայ
-					</option>
-					<option value="en">
-						Eng
-					</option>
-					<option value="ru">
-						Рус
-					</option>
-				  </select> 
-				  <select class="col me-2 border-rounded form-select">
-				  	<option value="amd">&#1423;</option>
-					<option value="usd">&#36;</option>
-					<option value="rub">&#8381;</option>
-				  </select>
-		      </form>
-			  <div class="col-3 col-lg-3 dropdown">
+			  <div class="col-4 row justify-content-center dropdown">
 				  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
 					<i class="bi bi-person-circle"></i> My Account
 				  </button>
 				  <ul class="dropdown-menu" aria-labelledby="accountDropdown">
-					<li><a class="dropdown-item" href="#">Login</a></li>
-					<li><a class="dropdown-item" href="#">Register</a></li>
-					<li><a class="dropdown-item" href="#">My Orders</a></li>
+					<li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+					<li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a></li>
+					<li><a class="dropdown-item" href="orders.html">My Orders</a></li>
 					<li><a class="dropdown-item" href="#">Account Settings</a></li>
 				  </ul>
 			  </div>
+	 	 </div>
+		</nav>
+		<nav class="navbar navbar-expand-lg bg-dark text-my-blue-2 justify-content-center m-0">
+		  <div class="container-fluid">
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0 row justify-content-between">
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Computers
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Laptops</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Monitors</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Keyboards</a></li>
+		          </ul>
+		        </li>
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Mobiles
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Laptops</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Monitors</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Keyboards</a></li>
+		          </ul>
+		        </li>
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            TV & Audio
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">TVs</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Projectors</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Home Audio</a></li>
+		          </ul>
+		        </li>
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Appliance
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Kitchen</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Laundry</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Vacuums & Mops</a></li>
+		          </ul>
+		        </li>
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Watches
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Smart Watches</a></li>
+		          </ul>
+		        </li>
+		        <li class="col nav-item dropdown">
+		          <a class="nav-link dropdown-toggle text-my-blue-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Gaming
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Gaming PCs</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Gaming Consoles</a></li>
+		            <li><a class="dropdown-item text-my-blue-2" href="#">Video Games</a></li>
+		          </ul>
+		        </li>
+		        
+		      </ul>
 		    </div>
 		  </div>
 		</nav>
 		<!-- Container Product-->
 
-		<nav aria-label="breadcrumb" class="row">
-            <ol class="breadcrumb mt-3 col mr-auto">
-                <li class="breadcrumb-item"><a href="shop.html">Computers</a></li>
-                <li class="breadcrumb-item"><a href="shop.html">Laptops</a></li>
-                <li class="breadcrumb-item"><a href="shop.html">Gaming Laptops</a></li>
-                <li class="breadcrumb-item active" aria-current="page">ASUS ROG X547-658</li>
-            </ol>
-            <form action="" class="form-inline col-12 col-md-auto mb-2 mb-md-0">
-                <label for="sortBy" class="mr-2">Sort By</label>
-                <select class="custom-select" id="sortBy">
-                    <option value="1">Price: Low to High</option>
-                    <option value="2">Price: High to Low</option>
-                    <option value="3">Rating</option>
-                </select>
-            </form>
-        </nav>
+		<nav aria-label="breadcrumb bg-dark">
+		  <ol class="breadcrumb bg-dark p-2 m-0">
+		    <li class="breadcrumb-item text-my-blue-2"><a href="#">Computing</a></li>
+		    <li class="breadcrumb-item text-my-blue-2"><a href="#">Laptops</a></li>
+		    <li class="breadcrumb-item active text-white" aria-current="page">ASUS Laptop</li>
+		  </ol>
+		</nav>
         <div class="bg-dark">
         	<h1 class="text-my-blue-2 text-center">ASUS Laptop</h1>
-        	<div class="row justify-content-center pb-1">
+        	<div class="row justify-content-center align-items-center pb-1">
         		<div class="col-12 col-md-6 row flex-column align-items-center">
-        			<div class="mb-1">
-        				<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
+        			<div class="row mb-1">
+        				<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="col-12">
         			</div>
         			<div class="row justift-content-between">
-        				<div class="row w-100">
-		        			<div class="col">
-		        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
-		        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
-		        				</a>
-		        			</div>
-		        			<div class="col">
-		        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
-		        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
-		        				</a>
-		        			</div>
-		        			<div class="col">
-		        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
-		        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
-		        				</a>
-		        			</div>
-		        			<div class="col">
-		        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
-		        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
-		        				</a>
-		        			</div>
-		        			
-		        		</div>
+	        			<div class="col">
+	        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
+	        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
+	        				</a>
+	        			</div>
+	        			<div class="col">
+	        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
+	        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
+	        				</a>
+	        			</div>
+	        			<div class="col">
+	        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
+	        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
+	        				</a>
+	        			</div>
+	        			<div class="col">
+	        				<a data-fancybox="gallery" href="https://bootstrap-tumo.github.io/xanut/img/66.png">
+	        					<img src="https://bootstrap-tumo.github.io/xanut/img/66.png" alt="..." class="img-fluid">
+	        				</a>
+	        			</div>
         			</div>
         		</div>
-        		<div class="col-12 col-md-6">
+        		<div class="col-12 col-md-6 ms-1">
         			<div class="row">
         				<div class="col-12">
         					<strong class="fs-1 text-my-blue-2">$200</strong>
@@ -136,16 +204,16 @@
 	                        <p class="font-weight-bold my-2">Options</p>
 	                    </div>
 	                    <div class="col-12">
-	                        <form action="">
-	                            <div class="custom-control custom-switch custom-control-inline">
+	                        <form action="" class="row">
+	                            <div class="col custom-control custom-switch custom-control-inline">
 	                                <input type="checkbox" id="mouse" name="customRadioInline1" class="custom-control-input">
 	                                <label class="custom-control-label" for="mouse">Mouse</label>
 	                            </div>
-	                            <div class="custom-control custom-switch custom-control-inline">
+	                            <div class="col custom-control custom-switch custom-control-inline">
 	                                <input type="checkbox" id="earphone" name="customRadioInline1" class="custom-control-input">
 	                                <label class="custom-control-label" for="earphone">Earphones</label>
 	                            </div>
-	                            <div class="custom-control custom-switch  custom-control-inline">
+	                            <div class="col custom-control custom-switch  custom-control-inline">
 	                                <input type="checkbox" class="custom-control-input" id="case" checked>
 	                                <label class="custom-control-label" for="case">Case</label>
 	                            </div>
@@ -157,12 +225,12 @@
 	                        <p class="font-weight-bold my-2">Color</p>
 	                    </div>
 	                    <div class="col-12">
-	                        <form action="">
-	                            <div class="custom-control custom-radio custom-control-inline">
+	                        <form action="" class="row">
+	                            <div class="col custom-control custom-radio custom-control-inline">
 	                                <input type="radio" id="black" name="customRadioInline1" class="custom-control-input">
 	                                <label class="custom-control-label" for="black">Black</label>
 	                            </div>
-	                            <div class="custom-control custom-radio custom-control-inline">
+	                            <div class="col custom-control custom-radio custom-control-inline">
 	                                <input type="radio" id="silver" name="customRadioInline1" class="custom-control-input"
 	                                       checked>
 	                                <label class="custom-control-label" for="silver">Silver</label>
@@ -170,44 +238,132 @@
 	                        </form>
 	                    </div>
 	                </div>
-	                <div class="nav">
-	                	<ul class="flex-row navbar-nav me-auto mb-2 mb-lg-0">
-					        <li class="nav-item">
-					          <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCollapse" aria-expanded="false" aria-controls="overviewCollapse">Overview</button>
-					        </li>
-					        <li class="nav-item">
-					          <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ratingCollapse" aria-expanded="false" aria-controls="ratingCollapse">Rating</button>
-					        </li>
-					        <li class="nav-item">
-					          <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#linkCollapse" aria-expanded="false" aria-controls="linkCollapse">Link</button>
-					        </li>
-					      </ul>
-	                </div>
-	                <div class="row accordion">
-	                	<div class="accordion-collapse collapse show" id="overviewCollapse">
-						  <div class="card card-body">
-						    Overview
-						  </div>
-						</div>
-						<div class="accordion-collapse collapse" id="ratingCollapse">
-						  <div class="card card-body">
-						    Rating
-						  </div>
-						</div>
-						<div class="accordion-collapse collapse" id="linkCollapse">
-						  <div class="card card-body">
-						    Link
-						  </div>
-						</div>
-						
-	                </div>
-        		</div>
-        	</div>
+	                <div class="accordion w-100" id="accordionExample">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" id="headingOne">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                           aria-controls="collapseOne">Overview</a>
+                    </li>
+                    <li class="nav-item" id="headingTwo">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                           aria-controls="collapseTwo">Rating</a>
+                    </li>
+                    <li class="nav-item" id="headingThree">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                           aria-expanded="false" aria-controls="collapseThree">Link</a>
+                    </li>
+                </ul>
+                <div class="card bg-dark text-white">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="font-weight-bold">Key Features</p>
+                            <ul>
+                                <li>2.2 GHz Intel Core i3-8130U Dual-Core</li>
+                                <li>8GB DDR4 | 128GB SSD</li>
+                                <li>15.6" 1920 x 1080 FHD Touchscreen</li>
+                                <li>Integrated Intel UHD Graphics 620</li>
+                            </ul>
+                            Designed to entertain the entire family, the 15.6" Inspiron 15 5000 Series 5570 Laptop from Dell
+                            is powered by a 2.2 GHz Intel Core i3-8130U dual-core processor that allows you to run multiple
+                            applications simultaneously. The processor also features a boost speed of up to 3.4 GHz and the
+                            system's 8GB of 2400 MHz DDR4 RAM, which may be upgraded to
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <span class="w-25">Productivity</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Performance</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Durability</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                     style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Battery Life</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Shipping</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                            3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                            laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                            coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                            anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                            of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-primary p-1"></div>
+        <h2 class="text-center text-my-blue-2">Related Products</h2>
+        <div class="row justify-content-center">
+            <div class="card m-2 col-md-2 col-12 text-center p-2">
+                <img img src="img/mac.png" alt="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <h5 class="text-danger">$ 122.99</h5>
+                    <a href="product.html" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card m-2 col-md-2 col-12 text-center p-2">
+                <img img src="img/mac.png" alt="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <h5 class="text-danger">$ 122.99</h5>
+                    <a href="product.html" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card m-2 col-md-2 col-12 text-center p-2">
+                <img img src="img/mac.png" alt="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <h5 class="text-danger">$ 122.99</h5>
+                    <a href="product.html" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card m-2 col-md-2 col-12 text-center p-2">
+                <img img src="img/mac.png" alt="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <h5 class="text-danger">$ 122.99</h5>
+                    <a href="product.html" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card m-2 col-md-2 col-12 text-center p-2">
+                <img img src="img/mac.png" alt="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <h5 class="text-danger">$ 122.99</h5>
+                    <a href="product.html" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+        </div>
 		<!-- Footer -->
-		<div class="border-top border-primary">
-			<div class="row container-fluid bg-dark justify-content-around">
+		<div>
+			<div class="row bg-primary p-1 m-0"></div>
+			<div class="row container-fluid bg-dark justify-content-around m-0">
 				<div class="col-12 col-lg-2 text-center p-1">
 					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Contact Us</strong></a>
 				</div>
@@ -224,7 +380,7 @@
 					<a href="#" class="text-my-blue-2 text-decoration-none"><strong>Term & Conditions</strong></a>
 				</div>
 			</div>
-			<div class="row container-fluid d-none d-lg-flex bg-dark">
+			<div class="row container-fluid d-none d-lg-flex bg-dark m-0">
 				<div class="col border-primary p-1 text-center">
 					<strong class="text-my-blue-2 fs-4">Categories</strong><br>
 					<a href="#" class="text-my-blue-2 text-decoration-none">Computers</a><br>
@@ -249,7 +405,7 @@
 					<a href="#" class="text-my-blue-2 text-decoration-none">Newsroow</a><br>
 				</div>
 			</div>
-			<div class="row container-fluid bg-dark justify-content-between fs-4">
+			<div class="row container-fluid bg-dark justify-content-between fs-4 m-0">
 				<div class="col-12 col-lg-4 row justify-content-center text-center">
 					<strong class="text-my-blue-2 col d-none d-lg-block">Social Media</strong>
 					<div class="col-12 col-lg-5 text-center">
@@ -271,9 +427,8 @@
 		<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="cartModalLabel">Cart</h5>
-		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      <div class="text-center border-bottom">
+		        <h4 class="modal-title" id="cartModalLabel">Cart</h4>
 		      </div>
 		      <div class="modal-body">
 		        <table class="table table-striped">
@@ -330,9 +485,9 @@
 				  </tbody>
 				</table>
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#shippingModal">Check Out</button>
+		      <div class="d-flex justify-content-around border-top p-1">
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+		        <button type="button" class="col-3 btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#shippingModal">Check Out</button>
 		      </div>
 		    </div>
 		  </div>
@@ -341,16 +496,43 @@
 		<div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Shiping</h5>
-		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      <div class="text-center border-bottom">
+		        <h4 class="modal-title" id="shippingModalLabel">Shipping</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		        <table class="table table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Country</th>
+				      <td>
+				      	<input type="text" id="countryInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">City</th>
+				      <td>
+				      	<input type="text" id="cityInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Street</th>
+				      <td>
+				      	<input type="text" id="streetInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Postal Code</th>
+				      <td>
+				      	<input type="text" id="postalCodeInput" class="form-control">
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#paymentModal">Save changes</button>
+		      <div class="d-flex justify-content-around border-top p-1">
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cartModal">Back</button>
+		        <button type="button" class="col-4 btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#paymentModal">Payment Methods</button>
 		      </div>
 		    </div>
 		  </div>
@@ -359,16 +541,74 @@
 		<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
-		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      <div class="text-center border-bottom">
+		        <h4 class="modal-title" id="paymentModalLabel">Payment</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		        <table class="table table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Card Number</th>
+				      <td>
+				      	<input type="text" id="cardNumberInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Cardholder Name</th>
+				      <td>
+				      	<input type="text" id="cardholderNameInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Valid Thru</th>
+				      <td>
+				      	<input type="text" id="validThruInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">E-Wallet</th>
+				      <td class="d-flex justify-content-start">
+				      	<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="idramRadio">
+						  <label class="form-check-label" for="idramRadio">
+						    <div class="col">
+						  		<img src="images/idram_logo.png" class="img-fluid">
+						  	</div>	
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="upayRadio">
+						  <label class="form-check-label" for="upayRadio">
+						  	<div class="col">
+						  		<img src="images/upay_logo.png" class="img-fluid">
+						  	</div>						    
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="easypayRadio">
+						  <label class="form-check-label" for="easypayRadio">
+						    <div class="col">
+						  		<img src="images/easypay_logo.png" class="img-fluid">
+						  	</div>		
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="inecopayRadio">
+						  <label class="form-check-label" for="inecopayRadio">
+						    <div class="col">
+						  		<img src="images/inecobank.png" class="img-fluid">
+						  	</div>	
+						  </label>
+						</div>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#checkingModal">Save changes</button>
+		      <div class="d-flex justify-content-around border-top p-1">
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#shippingModal">Back</button>
+		        <button type="button" class="col-4 btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#checkingModal">Pleace order</button>
 		      </div>
 		    </div>
 		  </div>
@@ -377,16 +617,141 @@
 		<div class="modal fade" id="checkingModal" tabindex="-1" aria-labelledby="checkingModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="checkingModalLabel">Checking</h5>
-		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      <div class="text-center border-bottom">
+		        <h4 class="modal-title" id="checkingModalLabel">Checking</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		      	<h2 class="text-center">Products</h2>
+		        <table class="table table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col" colspan="2">Product</th>
+				      <th scope="col">Price</th>
+				      <th scope="col">Quantity</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td colspan="2">ASUS Laptop</td>
+				      <td>$ 200</td>
+				      <td>2</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td colspan="2">Xbox Console</td>
+				      <td>$ 350</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td colspan="2">Samsung Galaxy Tab A6</td>
+				      <td>$ 300</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">4</th>
+				      <td colspan="2">SVEN Mouse</td>
+				      <td>$ 150</td>
+				      <td>2</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<h2 class="text-center">Address</h2>
+				<table class="table table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Country</th>
+				      <td>
+				      	<input type="text" id="countryInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">City</th>
+				      <td>
+				      	<input type="text" id="cityInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Street</th>
+				      <td>
+				      	<input type="text" id="streetInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Postal Code</th>
+				      <td>
+				      	<input type="text" id="postalCodeInput" class="form-control">
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+				<h2 class="text-center">Payment Method</h2>
+				<table class="table table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Card Number</th>
+				      <td>
+				      	<input type="text" id="cardNumberInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Cardholder Name</th>
+				      <td>
+				      	<input type="text" id="cardholderNameInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Valid Thru</th>
+				      <td>
+				      	<input type="text" id="validThruInput" class="form-control">
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">E-Wallet</th>
+				      <td class="d-flex justify-content-start">
+				      	<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="idramRadio">
+						  <label class="form-check-label" for="idramRadio">
+						    <div class="col">
+						  		<img src="images/idram_logo.png" class="img-fluid">
+						  	</div>	
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="upayRadio">
+						  <label class="form-check-label" for="upayRadio">
+						  	<div class="col">
+						  		<img src="images/upay_logo.png" class="img-fluid">
+						  	</div>						    
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="easypayRadio">
+						  <label class="form-check-label" for="easypayRadio">
+						    <div class="col">
+						  		<img src="images/easypay_logo.png" class="img-fluid">
+						  	</div>		
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="eWalletRadio" id="inecopayRadio">
+						  <label class="form-check-label" for="inecopayRadio">
+						    <div class="col">
+						  		<img src="images/inecobank.png" class="img-fluid">
+						  	</div>	
+						  </label>
+						</div>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#congratulationsModal">Save changes</button>
+		      <div class="d-flex justify-content-around border-top p-1">
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		        <button type="button" class="col-3 btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#paymentModal">Back</button>
+		        <button type="button" class="col-4 btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#congratulationsModal">Confirm and Pay</button>
 		      </div>
 		    </div>
 		  </div>
@@ -395,22 +760,86 @@
 		<div class="modal fade" id="congratulationsModal" tabindex="-1" aria-labelledby="congratulationsModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
+		      <div class="text-center border-bottom">
+		        <h4 class="modal-title" id="congratulationModalLabel">Congratulation</h4>
+		      </div>
+		      <div class="modal-body">
+		        <h1 class="text-center text-my-blue-2"><i class="bi bi-bag-check-fill"></i></h1>
+		        <h3 class="text-center">Thanks For Shopping</h3>
+		      </div>
+		      <div class="d-flex justify-content-around border-top p-1">
+		        <button type="button" class="col-2 btn btn-primary" data-bs-dismiss="modal">OK</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Login Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="congratulationsModalLabel">Congratulations</h5>
+		        <h5 class="modal-title" id="loginModalLabel">Login</h5>
 		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		        <form>
+				  <div class="mb-3">
+				    <label for="usernameLabel" class="form-label">Username</label>
+				    <input type="text" class="form-control" id="usernameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="passwordLabel" class="form-label">Password</label>
+				    <input type="password" class="form-control" id="passwordInput">
+				  </div>
+				  <div class="mb-3 form-check">
+				    <input type="checkbox" class="form-check-input" id="rememberMeCheck">
+				    <label class="form-check-label" for="rememberMeLabel">Remember Me</label>
+				  </div>
+				  <p>Are you new here? <a href="#signUpModal" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up</a></p>
+				  <button type="submit" class="btn btn-primary">Login</button>
+				</form>
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		    </div>
+		  </div>
+		</div>
+		<!-- Sign Up -->
+		<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+				  <div class="mb-3">
+				    <label for="firstNameLabel" class="form-label">First Name</label>
+				    <input type="text" class="form-control" id="firstNameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="lastNameLabel" class="form-label">Last Name</label>
+				    <input type="text" class="form-control" id="lastNameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="usernameLabel" class="form-label">Username</label>
+				    <input type="text" class="form-control" id="usernameInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="emailLabel" class="form-label">Email</label>
+				    <input type="email" class="form-control" id="emailInput">
+				  </div>
+				  <div class="mb-3">
+				    <label for="passwordLabel" class="form-label">Password</label>
+				    <input type="password" class="form-control" id="passwordInput">
+				  </div>
+				  <p>Already have an account? <a href="#loginModal" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+				  <button type="submit" class="btn btn-primary">Sign Up</button>
+				</form>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 	</div>
-
   <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script type="text/javascript" src="fancybox.js"></script>
